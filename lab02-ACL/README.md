@@ -28,7 +28,9 @@ sudo ebtables -A FORWARD --in-interface swp3 -s ! d2:02:f1:aa:66:52 -j DROP
 sudo ebtables -A INPUT --in-interface swp3 -s ! d2:02:f1:aa:66:52 -j DROP
 ```
 
-anche qui la `X` va sostituita con il numero dell'interfaccia e `__MAC_X__` con l'indirizzo MAC della macchina collegata a quell'interfaccia.
+**N.B.:** gli indirizzi MAC per i nodi cambiano ogni volta che viene fatto il loro startup.
+
+Anche qui la `X` va sostituita con il numero dell'interfaccia e `__MAC_X__` con l'indirizzo MAC della macchina collegata a quell'interfaccia.
 
 Nonostante gli indirizzi MAC siano giusti, le macchine riescono ancora a pingarsi: nessun filtro viene applicato. Il comportamento atteso dovrebbe essere che i pacchetti in arrivo sulla macchina 2 dovrebbero essere scartati.
 
@@ -55,3 +57,12 @@ sudo ebtables -A INPUT --in-interface swp3 -s d2:02:f1:aa:66:52 -j DROP
 la macchina pinga ed è pingabile.
 
 Controllare con wireshark cosa succede sul link nel secondo caso.
+
+
+## Wireshark
+Analizzato il link `swp3` in 3 casi diversi:
+1. **Usando entrambi i comandi con `FORWARD` e `INPUT`**: in questo caso i ping che partono dalla macchina dietro `swp3` non vengono catturati da wireshark: è come se non arrivassero proprio sul link, il che mi sembra strano.
+
+2. **Usando solo il comando `INPUT`**: in questo caso, come detto, la macchina pinga ed è pingabile. Infatti sul link compaiono sia i `ping request` che i `ping reply`.
+
+3. **Usando solo il comando `FORWARD`**: il link si comporta esattamente come il caso 1. Le richieste provenienti da altri nodi raggiungono il link, ma non ricevono risposta mentre le richieste che partono dal nodo non compaiono.
