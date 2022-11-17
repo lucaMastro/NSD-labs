@@ -56,7 +56,21 @@ sudo ebtables -A INPUT --in-interface swp3 -s d2:02:f1:aa:66:52 -j DROP
 ```
 la macchina pinga ed è pingabile.
 
-Controllare con wireshark cosa succede sul link nel secondo caso.
+Cercando in internet, pare che la chain `INPUT` sia per i pacchetti che hanno come indirizzo MAC destinatario quello dello switch. Questo non risulta però pingabile nemmeno assegnandogli un indirizzo ip, e quindi non testabile attualmente.
+
+
+## Alternativa
+Piuttosto che usare i comandi da shell è possibile generare un file in `/etc/cumulus/acl/policy_d/nsd.rules` nel quale inserire:
+```
+[ebtables]
+-A FORWARD --in-interface swp1 -s ! 0a:b0:d6:49:7a:8d -j DROP
+-A INPUT --in-interface swp1 -s ! 0a:b0:d6:49:7a:8d -j DROP
+-A FORWARD --in-interface swp2 -s ! e6:2f:e9:63:20:61 -j DROP
+-A INPUT --in-interface swp2 -s ! e6:2f:e9:63:20:61 -j DROP
+-A FORWARD --in-interface swp3 -s d2:02:f1:aa:66:52 -j DROP
+-A INPUT --in-interface swp3 -s d2:02:f1:aa:66:52 -j DROP
+```
+e poi lanciare da shell il comando `sudo cl-acltool -i` per installare le regole.
 
 
 ## Wireshark
