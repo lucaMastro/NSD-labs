@@ -11,7 +11,7 @@ Si usano container per maggior risparmio di risorse per i nodi, mentre la VM di 
  <tr> <td>
 
 ```
-ip link add link enp0s3 macsec0 type macsec
+ip link add link eth0 macsec0 type macsec
 ip macsec add macsec0 tx sa 0 pn 1 on key 01 \
 	09876543210987654321098765432109
 ip macsec add macsec0 rx address \
@@ -27,7 +27,7 @@ ip addr add 10.100.0.1/24 dev macsec0
 </td><td>
 
 ```
-ip link add link enp0s3 macsec0 type macsec
+ip link add link eth0 macsec0 type macsec
 ip macsec add macsec0 tx sa 0 pn 1 on key 02 \
 	12345678901234567890123456789012
 ip macsec add macsec0 rx \
