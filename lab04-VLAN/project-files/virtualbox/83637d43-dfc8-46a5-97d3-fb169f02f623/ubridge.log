@@ -1,0 +1,19 @@
+uBridge version 0.9.18 running with libpcap version 1.8.1
+Hypervisor TCP control server started (IP localhost port 39563).
+UDP tunnel connecting from local port 10013 to IPv4 address 127.0.0.1 on port 10012
+UDP tunnel connecting from local port 10005 to IPv4 address 192.168.56.101 on port 20005
+Source NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-1 has started
+Destination NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-1 has started
+UDP tunnel connecting from local port 10017 to IPv4 address 127.0.0.1 on port 10016
+UDP tunnel connecting from local port 10006 to IPv4 address 192.168.56.101 on port 20006
+Source NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-2 has started
+Destination NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-2 has started
+UDP tunnel connecting from local port 10021 to IPv4 address 127.0.0.1 on port 10020
+UDP tunnel connecting from local port 10004 to IPv4 address 127.0.0.1 on port 10003
+Source NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-3 has started
+Destination NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-3 has started
+UDP tunnel connecting from local port 10025 to IPv4 address 127.0.0.1 on port 10024
+UDP tunnel connecting from local port 10007 to IPv4 address 192.168.56.101 on port 20007
+Source NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-4 has started
+Destination NIO listener thread for VBOX-83637d43-dfc8-46a5-97d3-fb169f02f623-4 has started
+Capturing to file '/home/luca/Scrivania/NSD/labs/lab04-VLAN/lab04-VLAN/project-files/captures/docker-share_eth0_to_cumulus-2_swp4.pcap'

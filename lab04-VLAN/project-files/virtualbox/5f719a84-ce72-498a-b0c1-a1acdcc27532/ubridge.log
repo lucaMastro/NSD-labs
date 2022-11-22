@@ -1,0 +1,15 @@
+uBridge version 0.9.18 running with libpcap version 1.8.1
+Hypervisor TCP control server started (IP localhost port 45025).
+UDP tunnel connecting from local port 10015 to IPv4 address 127.0.0.1 on port 10014
+UDP tunnel connecting from local port 10001 to IPv4 address 192.168.56.101 on port 20001
+Destination NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-1 has started
+UDP tunnel connecting from local port 10019 to IPv4 address 127.0.0.1 on port 10018
+UDP tunnel connecting from local port 10002 to IPv4 address 192.168.56.101 on port 20002
+Source NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-2 has started
+Destination NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-2 has started
+UDP tunnel connecting from local port 10023 to IPv4 address 127.0.0.1 on port 10022
+UDP tunnel connecting from local port 10003 to IPv4 address 127.0.0.1 on port 10004
+Source NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-3 has started
+Destination NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-3 has started
+Source NIO listener thread for VBOX-5f719a84-ce72-498a-b0c1-a1acdcc27532-1 has started
+Capturing to file '/home/luca/Scrivania/NSD/labs/lab04-VLAN/lab04-VLAN/project-files/captures/cumulus-1_swp3_to_cumulus-2_swp3.pcap'
