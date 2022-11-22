@@ -6,4 +6,4 @@ Repository dedicato ai vari laboratori del corso Network and System Defence.
 
 - [Bidirectional secure channel based on MACSEC](https://github.com/lucaMastro/NSD-labs/tree/main/lab03-MACsec): lab sull'implementazione di un canale sicuro bidirezionale tra due nodi a livello 2, sfruttando il protocollo MACSEC.
 
-- [VLANs](): creazione di due reti virtuali connesse tra loro da un router esterno.
+- [VLANs](https://github.com/lucaMastro/NSD-labs/tree/main/lab04-VLAN): creazione di due reti virtuali connesse tra loro da un router esterno.
