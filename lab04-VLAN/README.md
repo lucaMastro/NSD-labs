@@ -12,7 +12,7 @@ Si usano container per maggior risparmio di risorse per i nodi, mentre la VM di 
 <td>
 
 **docker-X, with `X = 1` for docker-1 and `X = 2` for docker-3**
-```
+```bash
 ip a a 10.0.10.10X/24 dev eth0
 ip a r default via 10.0.10.1 
 ```
@@ -21,7 +21,7 @@ ip a r default via 10.0.10.1
 <td>
 
 **docker-X, with `X = 1` for docker-2 and `X = 2` for docker-4**
-```
+```bash
 ip a a 10.0.20.10X/24 dev eth0
 ip a r default via 10.0.20.1 
 ```
@@ -32,7 +32,7 @@ ip a r default via 10.0.20.1
 <td>
 	
 **cumulus-1**
-```
+```bash
 net del all
 net commit
 net add bridge bridge ports swp1,swp2,swp3
@@ -46,7 +46,7 @@ net commit
 <td>
 
 **cumulus-2**
-```
+```bash
 net del all
 net commit
 net add bridge bridge ports swp1,swp2,swp3,swp4
@@ -64,7 +64,7 @@ net commit
 <td colspan=2>
 
 **docker-share**
-```
+```bash
 sysctl -w net.ipv4.ip_forward=1
 ip link add link eth0 name eth0.10 type vlan id 10
 ip link add link eth0 name eth0.20 type vlan id 20
